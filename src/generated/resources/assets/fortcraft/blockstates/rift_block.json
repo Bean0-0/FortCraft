@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fortcraft:block/rift_block"
+    }
+  }
+}
