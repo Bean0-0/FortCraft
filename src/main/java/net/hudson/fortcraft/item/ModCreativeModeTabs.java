@@ -23,6 +23,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RIFT_DEVICE.get());
 
 
+                        //Blocks
+                        pOutput.accept(ModBlocks.RIFT_BLOCK.get());
+
                         //Food
                         pOutput.accept(ModItems.MEAT.get());
                         pOutput.accept(ModItems.BANDAGE.get());

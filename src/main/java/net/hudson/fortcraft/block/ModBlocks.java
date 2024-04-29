@@ -25,7 +25,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FortCraft.MOD_ID);
 
     public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
-            () -> new RiftBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
     public static final RegistryObject<Block> LAUNCH_PAD = registerBlock("launch_pad",
             () -> new LaunchPadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));

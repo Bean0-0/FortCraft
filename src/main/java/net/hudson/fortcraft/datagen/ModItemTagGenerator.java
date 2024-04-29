@@ -20,6 +20,5 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ItemTags.MUSIC_DISCS).add(ModItems.CHUGWU_MUSIC_DISC.get());
-
     }
 }
