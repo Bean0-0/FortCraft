@@ -1,16 +1,12 @@
 package net.hudson.fortcraft.block;
 
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.block.custom.BouncePadBlock;
-import net.hudson.fortcraft.block.custom.BuildingGhostBlock;
-import net.hudson.fortcraft.block.custom.LaunchPadBlock;
-import net.hudson.fortcraft.block.custom.RiftBlock;
+import net.hudson.fortcraft.block.custom.GemPolishingStationBlock;
 import net.hudson.fortcraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,19 +24,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> BUILDING_GHOST = registerBlock("building_ghost",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion()));
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion()));
-
-    public static final RegistryObject<Block> LAUNCH_PAD = registerBlock("launch_pad",
-            () -> new LaunchPadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-
-    public static final RegistryObject<Block> BOUNCE_PAD = registerBlock("bounce_pad",
-            () -> new BouncePadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-
-    public static final RegistryObject<Block> BUILDING_GHOST = registerBlock("building_ghost",
-            () -> new BuildingGhostBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion().noCollission().replaceable()));
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission().noOcclusion()));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

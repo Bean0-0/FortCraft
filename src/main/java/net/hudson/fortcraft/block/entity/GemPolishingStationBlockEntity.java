@@ -2,8 +2,6 @@ package net.hudson.fortcraft.block.entity;
 
 import net.hudson.fortcraft.block.entity.util.TickableBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -16,16 +14,11 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements Ticka
 
     @Override
     public void tick() {
-        if (this.level == null || this.level.isClientSide())
+        if(this.level == null || this.level.isClientSide())
             return;
 
-        if(this.ticks++ % 100 == 0) {
-            Pig pig = EntityType.PIG.create(this.level);
-            if (pig == null)
-                return;
-
-            pig.setPos(this.worldPosition.getX() + 0.5D, this.worldPosition.getY() + 1, this.worldPosition.getZ() + 0.5D);
-            this.level.addFreshEntity(pig);
+        if(this.ticks++ == 5) {
+            this.level.removeBlock(this.getBlockPos(), false);
         }
     }
 }
