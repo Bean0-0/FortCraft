@@ -1,7 +1,6 @@
 package net.hudson.fortcraft.datagen;
 
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.block.ModBlocks;
 import net.hudson.fortcraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -23,8 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.CHUGWU_MUSIC_DISC,"stick");
         simpleItem(ModItems.MEDKIT,"book");
         simpleItem(ModItems.RIFT_DEVICE);
-
         handheldItem(ModItems.LC_Shovel,"stick");
+        simpleItem(ModItems.BUILDING_WALL, "stick");
     }
 
     //handheld item
