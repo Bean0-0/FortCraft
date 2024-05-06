@@ -19,8 +19,8 @@ import net.hudson.fortcraft.effect.ModEffects;
 import net.hudson.fortcraft.item.ModCreativeModeTabs;
 import net.hudson.fortcraft.item.ModItems;
 import net.hudson.fortcraft.sound.ModSounds;
->>>>>>> 35ec919 (Added a minor branch)
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;

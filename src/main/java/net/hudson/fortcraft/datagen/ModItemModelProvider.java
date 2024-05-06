@@ -53,8 +53,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.CHUGWU_MUSIC_DISC);
         simpleItem(ModItems.RIFT_DEVICE);
-
-
     }
 
     //handheld item
@@ -68,7 +66,6 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation("item/handheld")).texture("layer0",
                 new ResourceLocation("minecraft", "item/"+minecraftTexture));
     }
-
 
     //regular item
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){

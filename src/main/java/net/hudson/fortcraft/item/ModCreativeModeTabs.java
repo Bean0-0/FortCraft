@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
 
                         //Blocks
                         pOutput.accept(ModBlocks.RIFT_BLOCK.get());
+                        pOutput.accept(ModBlocks.BUILDING_GHOST.get());
 
                         //Food
                         pOutput.accept(ModItems.MEAT.get());
@@ -55,7 +56,9 @@ public class ModCreativeModeTabs {
                         //Other
                         pOutput.accept(ModItems.CHUGWU_MUSIC_DISC.get());
 
-
+                        // Buildings
+                        pOutput.accept(ModItems.BUILDING_WALL.get());
+                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
                     })
                     .build());
 

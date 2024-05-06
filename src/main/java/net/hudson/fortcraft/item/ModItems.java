@@ -2,6 +2,7 @@ package net.hudson.fortcraft.item;
 
 import net.hudson.fortcraft.FortCraft;
 import net.hudson.fortcraft.item.custom.*;
+import net.hudson.fortcraft.item.custom.BuildingWallItem;
 import net.hudson.fortcraft.sound.ModSounds;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;

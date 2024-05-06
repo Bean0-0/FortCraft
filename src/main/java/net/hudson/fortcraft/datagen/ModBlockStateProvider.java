@@ -22,11 +22,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blocksWithItem(ModBlocks.LAUNCH_PAD);
         blocksWithItem(ModBlocks.RIFT_BLOCK);
         blocksWithItem(ModBlocks.BUILDING_GHOST);
-
-
     }
 
-    private void blocksWithItem(RegistryObject<Block> blockRegistryObject){
+    private void blocksWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),cubeAll(blockRegistryObject.get()));
     }
 }
