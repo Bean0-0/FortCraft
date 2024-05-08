@@ -36,7 +36,9 @@ public class ModCreativeModeTabs {
 
                         // Buildings
                         pOutput.accept(ModItems.BUILDING_WALL.get());
-                        pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
+                        pOutput.accept(ModItems.BUILDING_FLOOR.get());
+                        pOutput.accept(ModItems.BUILDING_STAIRS.get());
+                        pOutput.accept(ModItems.BUILDING_PYRAMID.get());
                     })
                     .build());
 

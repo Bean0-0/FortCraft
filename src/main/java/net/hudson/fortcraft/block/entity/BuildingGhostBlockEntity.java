@@ -5,11 +5,11 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class GemPolishingStationBlockEntity extends BlockEntity implements TickableBlockEntity {
+public class BuildingGhostBlockEntity extends BlockEntity implements TickableBlockEntity {
     private int ticks;
 
-    public GemPolishingStationBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.GEM_POLISHING_BE.get(), pos, state);
+    public BuildingGhostBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.BUILDING_GHOST_BE.get(), pos, state);
     }
 
     @Override

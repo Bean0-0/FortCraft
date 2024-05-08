@@ -1,6 +1,9 @@
 package net.hudson.fortcraft.item;
 
 import net.hudson.fortcraft.FortCraft;
+import net.hudson.fortcraft.item.custom.BuildingFloorItem;
+import net.hudson.fortcraft.item.custom.BuildingPyramidItem;
+import net.hudson.fortcraft.item.custom.BuildingStairsItem;
 import net.hudson.fortcraft.item.custom.BuildingWallItem;
 import net.hudson.fortcraft.sound.ModSounds;
 import net.minecraft.world.item.Item;
@@ -35,6 +38,15 @@ public class ModItems {
 
     public static final RegistryObject<Item> BUILDING_WALL = ITEMS.register("building_wall",
             () -> new BuildingWallItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_FLOOR = ITEMS.register("building_floor",
+            () -> new BuildingFloorItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_STAIRS = ITEMS.register("building_stairs",
+            () -> new BuildingStairsItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_PYRAMID = ITEMS.register("building_pyramid",
+            () -> new BuildingPyramidItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

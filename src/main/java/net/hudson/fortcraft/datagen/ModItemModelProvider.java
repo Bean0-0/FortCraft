@@ -24,6 +24,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RIFT_DEVICE);
         handheldItem(ModItems.LC_Shovel,"stick");
         simpleItem(ModItems.BUILDING_WALL, "stick");
+        simpleItem(ModItems.BUILDING_FLOOR, "stick");
+        simpleItem(ModItems.BUILDING_STAIRS, "stick");
+        simpleItem(ModItems.BUILDING_PYRAMID, "stick");
+
     }
 
     //handheld item

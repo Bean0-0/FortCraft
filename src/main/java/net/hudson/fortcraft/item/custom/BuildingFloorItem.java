@@ -13,8 +13,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-public class BuildingWallItem extends Item {
-    public BuildingWallItem(Properties pProperties) {
+public class BuildingFloorItem extends Item {
+    public BuildingFloorItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -23,10 +23,10 @@ public class BuildingWallItem extends Item {
         if(isSelected && entity instanceof Player player) {
             if(!level.isClientSide()) {
                 if(player.getXRot() < 20) {
-                    placeBlocks(level, player.blockPosition().relative(player.getDirection()).above(), ModBlocks.BUILDING_GHOST.get(), player.getDirection());
+                    placeBlocks(level, player.blockPosition().relative(player.getDirection(), 2), ModBlocks.BUILDING_GHOST.get(), player.getDirection());
                 }
                 else {
-                    placeBlocks(level, player.blockPosition().above(), ModBlocks.BUILDING_GHOST.get(), player.getDirection());
+                    placeBlocks(level, player.blockPosition().relative(player.getDirection(), 1), ModBlocks.BUILDING_GHOST.get(), player.getDirection());
                 }
             }
         }
@@ -35,11 +35,10 @@ public class BuildingWallItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if(!level.isClientSide()) {
-            if(player.getXRot() < 20) {
-                placeBlocks(level, player.blockPosition().relative(player.getDirection()).above(), Blocks.OAK_PLANKS, player.getDirection());
-            }
-            else {
-                placeBlocks(level, player.blockPosition().above(), Blocks.OAK_PLANKS, player.getDirection());
+            if (player.getXRot() < 20) {
+                placeBlocks(level, player.blockPosition().relative(player.getDirection(), 2), Blocks.OAK_SLAB, player.getDirection());
+            } else {
+                placeBlocks(level, player.blockPosition().relative(player.getDirection(), 1), Blocks.OAK_SLAB, player.getDirection());
             }
         }
         return InteractionResultHolder.success(player.getItemInHand(hand));
@@ -71,15 +70,15 @@ public class BuildingWallItem extends Item {
             startBlockPos = startBlockPos.south();
         }
 
-        BlockPos pos1 = startBlockPos.relative(playerFacing, 2);
-        BlockPos pos2 = startBlockPos.relative(playerFacing,2).above();
-        BlockPos pos3 = startBlockPos.relative(playerFacing,2).below();
-        BlockPos pos4 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getClockWise());
-        BlockPos pos5 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getClockWise()).above();
-        BlockPos pos6 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getClockWise()).below();
-        BlockPos pos7 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getCounterClockWise());
-        BlockPos pos8 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getCounterClockWise()).above();
-        BlockPos pos9 = startBlockPos.relative(playerFacing,2).relative(playerFacing.getCounterClockWise()).below();
+        BlockPos pos1 = startBlockPos.below();
+        BlockPos pos2 = startBlockPos.below().north();
+        BlockPos pos3 = startBlockPos.below().north().east();
+        BlockPos pos4 = startBlockPos.below().east();
+        BlockPos pos5 = startBlockPos.below().south().east();
+        BlockPos pos6 = startBlockPos.below().south();
+        BlockPos pos7 = startBlockPos.below().south().west();
+        BlockPos pos8 = startBlockPos.below().west();
+        BlockPos pos9 = startBlockPos.below().north().west();
         BlockPos[] posArr = {pos1, pos2, pos3, pos4, pos5, pos6, pos7, pos8, pos9};
 
         for(BlockPos pos:posArr) {
