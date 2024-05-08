@@ -1,7 +1,7 @@
 package net.hudson.fortcraft.block;
 
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.block.custom.GemPolishingStationBlock;
+import net.hudson.fortcraft.block.custom.BuildingGhostBlock;
 import net.hudson.fortcraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,10 +24,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion()));
 
     public static final RegistryObject<Block> BUILDING_GHOST = registerBlock("building_ghost",
-            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission().noOcclusion()));
-
-    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
-            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission().noOcclusion()));
+            () -> new BuildingGhostBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion().noCollission().replaceable()));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

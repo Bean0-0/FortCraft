@@ -2,7 +2,6 @@ package net.hudson.fortcraft.item;
 
 import net.hudson.fortcraft.FortCraft;
 import net.hudson.fortcraft.item.custom.*;
-import net.hudson.fortcraft.item.custom.BuildingWallItem;
 import net.hudson.fortcraft.sound.ModSounds;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
@@ -20,7 +19,6 @@ import java.util.Locale;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, FortCraft.MOD_ID);
-
 
     public static final RegistryObject<Item> RIFT_DEVICE = ITEMS.register("rift_device",
             () -> new Item(new Item.Properties()));
