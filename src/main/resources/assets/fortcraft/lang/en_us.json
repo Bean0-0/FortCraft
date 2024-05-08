@@ -1,0 +1,18 @@
+{
+  "item.fortcraft.rift_device": "Rift Device",
+
+  "block.fortcraft.rift_block": "Rift Block",
+
+  "item.fortcraft.meat": "Meat",
+
+  "item.fortcraft.bandage": "Bandage",
+
+  "item.fortcraft.medkit": "Medkit",
+
+  "item.fortcraft.chugwu_music_disc": "Chug With You",
+  "item.fortcraft.chugwu_music_disc.desc": "Leviathan - Chug Jug With You",
+
+  "effects.fortcraft.freeze": "Freeze",
+
+  "creativetab.fortcraft_tab": "FortCraft"
+}
