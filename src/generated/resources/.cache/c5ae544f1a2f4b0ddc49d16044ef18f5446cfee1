@@ -1,13 +1,4 @@
-// 1.20.1	2024-05-15T20:14:22.9200164	Block States: fortcraft
-d0d266c034198e4efa928c66e0d537975423fc81 assets/fortcraft/blockstates/bounce_pad.json
-277332ad3b802fa898d9be51b79cc7f4b4a7d956 assets/fortcraft/blockstates/building_ghost.json
-b8bcb50aabf65576f0c83c09e5d3d0f7ac417a3f assets/fortcraft/blockstates/launch_pad.json
+// 1.20.1	2024-05-11T12:45:08.0549645	Block States: fortcraft
 8509dbddd6a7970ef4ea25d7adbef01f2af6a28e assets/fortcraft/blockstates/rift_block.json
-019460bb3a2997c0e5047015ba94f0d700bea76c assets/fortcraft/models/block/bounce_pad.json
-7b8c95fbc5df9479393611efa944ae9717216a08 assets/fortcraft/models/block/building_ghost.json
-c47140412154817a3e9a50e4f3228d43b608a24a assets/fortcraft/models/block/launch_pad.json
 bbdcf1ed437a5c4c0036456ee73d1d4b82ec9985 assets/fortcraft/models/block/rift_block.json
-149ca7462ae8f0694a6cbb065e67cdd85066ccdd assets/fortcraft/models/item/bounce_pad.json
-b087b9b36a962b3c0ebcdba83c246ad9cbe4c69a assets/fortcraft/models/item/building_ghost.json
-b1c8bb6c2000cb8162d63301fb50b000078f9c84 assets/fortcraft/models/item/launch_pad.json
 4e95f812cb711e201985389571df11ad8d0cf504 assets/fortcraft/models/item/rift_block.json
