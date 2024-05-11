@@ -2,7 +2,6 @@ package net.hudson.fortcraft;
 
 import com.mojang.logging.LogUtils;
 import net.hudson.fortcraft.block.ModBlocks;
-<<<<<<< HEAD
 import net.hudson.fortcraft.block.entity.ModBlockEntities;
 import net.hudson.fortcraft.effect.ModEffects;
 import net.hudson.fortcraft.entity.ModEntities;
@@ -14,11 +13,12 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-=======
 import net.hudson.fortcraft.effect.ModEffects;
 import net.hudson.fortcraft.item.ModCreativeModeTabs;
 import net.hudson.fortcraft.item.ModItems;
 import net.hudson.fortcraft.sound.ModSounds;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -54,15 +54,10 @@ public class FortCraft {
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
 
-<<<<<<< HEAD
         ModEntities.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
         ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
-
-
-=======
->>>>>>> 35ec919 (Added a minor branch)
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -94,13 +89,9 @@ public class FortCraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-<<<<<<< HEAD
             ItemBlockRenderTypes.setRenderLayer(ModBlocks.BUILDING_GHOST.get(), RenderType.translucent());
             EntityRenderers.register(ModEntities.BLOCK_RIFT_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.BLOCK_RIFT_KILL_PROJECTILE.get(), ThrownItemRenderer::new);
-=======
->>>>>>> 35ec919 (Added a minor branch)
-
         }
     }
 }

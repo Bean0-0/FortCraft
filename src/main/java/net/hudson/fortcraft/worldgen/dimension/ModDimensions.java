@@ -1,16 +1,39 @@
 package net.hudson.fortcraft.worldgen.dimension;
 
+import com.mojang.datafixers.util.Pair;
+import net.hudson.fortcraft.FortCraft;
+import net.hudson.fortcraft.worldgen.biome.ModBiomes;
+import net.hudson.fortcraft.FortCraft;
+import net.hudson.fortcraft.worldgen.biome.ModBiomes;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
+import net.minecraft.world.level.dimension.DimensionType;
+import net.minecraft.world.level.dimension.LevelStem;
+import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
+import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
+
+import java.util.List;
+import java.util.OptionalLong;
+
 public class ModDimensions {
-    /*
-    public static final ResourceKey<LevelStem> HUDSONDIM_KEY = ResourceKey.create(Registries.LEVEL_STEM,
-            new ResourceLocation(FortCraft.MOD_ID, "hudsondim"));
-    public static final ResourceKey<Level> HUDSONDIM_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
-            new ResourceLocation(FortCraft.MOD_ID, "hudsondim"));
-    public static final ResourceKey<DimensionType> HUDSON_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-            new ResourceLocation(FortCraft.MOD_ID, "hudsondim_type"));
+    public static final ResourceKey<LevelStem> KAUPENDIM_KEY = ResourceKey.create(Registries.LEVEL_STEM,
+            new ResourceLocation(FortCraft.MOD_ID, "kaupendim"));
+    public static final ResourceKey<Level> KAUPENDIM_LEVEL_KEY = ResourceKey.create(Registries.DIMENSION,
+            new ResourceLocation(FortCraft.MOD_ID, "kaupendim"));
+    public static final ResourceKey<DimensionType> KAUPEN_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
+            new ResourceLocation(FortCraft.MOD_ID, "kaupendim_type"));
+
 
     public static void bootstrapType(BootstapContext<DimensionType> context) {
-        context.register(HUDSON_DIM_TYPE, new DimensionType(
+        context.register(KAUPEN_DIM_TYPE, new DimensionType(
                 OptionalLong.of(12000), // fixedTime
                 false, // hasSkylight
                 false, // hasCeiling
@@ -51,10 +74,8 @@ public class ModDimensions {
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
-        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.HUDSON_DIM_TYPE), noiseBasedChunkGenerator);
+        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.KAUPEN_DIM_TYPE), noiseBasedChunkGenerator);
 
-        context.register(HUDSONDIM_KEY, stem);
+        context.register(KAUPENDIM_KEY, stem);
     }
-
-     */
 }
