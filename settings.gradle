@@ -6,6 +6,10 @@ pluginManagement {
             url = 'https://maven.minecraftforge.net/'
         }
         maven { url = 'https://maven.parchmentmc.org' }
+        maven { // Used for Vanilla Minecraft's libraries
+            url = "https://repo.spongepowered.org/repository/maven-public/"
+        }
+
     }
 }
 
