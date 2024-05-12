@@ -1,0 +1,10 @@
+{
+  "chugwu": {
+    "sounds": [
+      {
+        "name": "fortcraft:chugwu",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "item.fortcraft.rift_device": "Rift Device",
+
+  "block.fortcraft.launch_pad": "Launch Pad",
+  "block.fortcraft.bounce_pad": "Bounce Pad",
+
+  "item.fortcraft.meat": "Meat",
+  "item.fortcraft.bandage": "Bandages",
+  "item.fortcraft.medkit": "Medkit",
+  "item.fortcraft.bigpot": "Big Pot",
+  "item.fortcraft.mini": "Mini Shield Potion",
+  "item.fortcraft.chug_jug": "Chug Jug",
+  "item.fortcraft.slurp_juice": "Slurp Juice",
+  "item.fortcraft.hop_rock": "Hop Rock",
+
+  "item.fortcraft.lc_shovel": "Company Shovel",
+  "item.fortcraft.smg_gun": "Submachine Gun",
+  "item.fortcraft.ar_gun": "Assault Rifle" ,
+  "item.fortcraft.shotgun": "Shotgun" ,
+  "item.fortcraft.sniper_gun": "Block Action Sniper" ,
+
+  "item.fortcraft.glider": "Glider",
+  "item.fortcraft.block_rift": "Block Rift",
+  "item.fortcraft.rift_to_go": "Rift To-Go",
+
+  "item.fortcraft.chugwu_music_disc": "Chug With You",
+  "item.fortcraft.chugwu_music_disc.desc": "Leviathan - Chug Jug With You",
+
+  "effects.fortcraft.freeze": "Freeze",
+  "effects.fortcraft.bounce": "Bounce",
+  "effects.fortcraft.shield": "Shield",
+
+  "sounds.tutorialmod.ar_shot": "AR pew pew",
+
+  "creativetab.fortcraft_tab": "FortCraft"
+}
