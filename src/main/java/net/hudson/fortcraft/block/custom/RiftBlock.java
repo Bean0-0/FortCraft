@@ -33,12 +33,12 @@ public class RiftBlock extends Block {
     private void handleHudsonPortal(Entity player, BlockPos pPos) {
         if (player.level() instanceof ServerLevel serverlevel) {
             MinecraftServer minecraftserver = serverlevel.getServer();
-            ResourceKey<Level> resourcekey = player.level().dimension() == ModDimensions.KAUPENDIM_LEVEL_KEY ?
-                    Level.OVERWORLD : ModDimensions.KAUPENDIM_LEVEL_KEY;
+            ResourceKey<Level> resourcekey = player.level().dimension() == ModDimensions.FORTCRAFT_LEVEL_KEY ?
+                    Level.OVERWORLD : ModDimensions.FORTCRAFT_LEVEL_KEY;
 
             ServerLevel portalDimension = minecraftserver.getLevel(resourcekey);
             if (portalDimension != null && !player.isPassenger()) {
-                if(resourcekey == ModDimensions.KAUPENDIM_LEVEL_KEY) {
+                if(resourcekey == ModDimensions.FORTCRAFT_LEVEL_KEY) {
                     player.changeDimension(portalDimension, new ModTeleporter(pPos, true));
                 } else {
                     player.changeDimension(portalDimension, new ModTeleporter(pPos, false));
