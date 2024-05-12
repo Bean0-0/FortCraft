@@ -42,6 +42,8 @@ public class FortCraft {
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
 
+        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
