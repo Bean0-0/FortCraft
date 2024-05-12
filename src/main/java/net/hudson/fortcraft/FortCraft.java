@@ -2,26 +2,28 @@ package net.hudson.fortcraft;
 
 import com.mojang.logging.LogUtils;
 import net.hudson.fortcraft.block.ModBlocks;
-import net.hudson.fortcraft.block.entity.ModBlockEntities;
+import net.hudson.fortcraft.effect.ModEffects;
+import net.hudson.fortcraft.entity.ModEntities;
 import net.hudson.fortcraft.item.ModCreativeModeTabs;
 import net.hudson.fortcraft.item.ModItems;
 import net.hudson.fortcraft.sound.ModSounds;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.hudson.fortcraft.util.ModData;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(FortCraft.MOD_ID)
@@ -33,19 +35,18 @@ public class FortCraft {
 
     public FortCraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
+
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
-
-        ModBlockEntities.register(modEventBus);
-
         ModEffects.register(modEventBus);
 
-        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
+        ModEntities.register(modEventBus);
+
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -73,12 +74,13 @@ public class FortCraft {
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BUILDING_GHOST.get(), RenderType.translucent());
+            EntityRenderers.register(ModEntities.BLOCK_RIFT_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.BLOCK_RIFT_KILL_PROJECTILE.get(), ThrownItemRenderer::new);
+
         }
     }
 }

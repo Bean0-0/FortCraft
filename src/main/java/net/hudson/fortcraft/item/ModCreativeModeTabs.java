@@ -23,22 +23,36 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RIFT_DEVICE.get());
 
 
-                        //Blocks
-                        pOutput.accept(ModBlocks.RIFT_BLOCK.get());
-                        pOutput.accept(ModBlocks.BUILDING_GHOST.get());
-
                         //Food
                         pOutput.accept(ModItems.MEAT.get());
                         pOutput.accept(ModItems.BANDAGE.get());
                         pOutput.accept(ModItems.MEDKIT.get());
+                        pOutput.accept(ModItems.MINI.get());
+                        pOutput.accept(ModItems.BIGPOT.get());
+                        pOutput.accept(ModItems.SLURP_JUICE.get());
+                        pOutput.accept(ModItems.CHUG_JUG.get());
+                        pOutput.accept(ModItems.HOP_ROCK.get());
 
+                        //Weapons
+                        pOutput.accept(ModItems.AR_GUN.get());
+                        pOutput.accept(ModItems.SHOTGUN.get());
+                        pOutput.accept(ModItems.SMG_GUN.get());
+                        pOutput.accept(ModItems.SNIPER_GUN.get());
+
+                        //Utitly
+                        pOutput.accept(ModItems.BLOCK_RIFT.get());
+                        pOutput.accept(ModItems.RIFT_TO_GO.get());
+                        pOutput.accept(ModItems.GLIDER.get());
+
+                        //Blocks
+                        pOutput.accept(ModBlocks.LAUNCH_PAD.get());
+                        pOutput.accept(ModBlocks.BOUNCE_PAD.get());
+                        pOutput.accept(ModBlocks.RIFT_BLOCK.get());
+
+                        //Other
                         pOutput.accept(ModItems.CHUGWU_MUSIC_DISC.get());
 
-                        // Buildings
-                        pOutput.accept(ModItems.BUILDING_WALL.get());
-                        pOutput.accept(ModItems.BUILDING_FLOOR.get());
-                        pOutput.accept(ModItems.BUILDING_STAIRS.get());
-                        pOutput.accept(ModItems.BUILDING_PYRAMID.get());
+
                     })
                     .build());
 

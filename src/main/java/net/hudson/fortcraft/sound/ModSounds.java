@@ -15,6 +15,7 @@ public class ModSounds {
 
     //Music Discs
     public static final RegistryObject<SoundEvent> CHUGWU = registerSoundEvents("chugwu");
+    public static final RegistryObject<SoundEvent> AR_SHOT = registerSoundEvents("ar_shot");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name){
         return SOUND_EVENTS.register(name,() -> SoundEvent.createVariableRangeEvent(new ResourceLocation(FortCraft.MOD_ID,name)));

@@ -1,6 +1,7 @@
 package net.hudson.fortcraft.datagen;
 
 import net.hudson.fortcraft.FortCraft;
+import net.hudson.fortcraft.block.ModBlocks;
 import net.hudson.fortcraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -17,16 +18,38 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        //Foods
         simpleItem(ModItems.BANDAGE,"string");
         simpleItem(ModItems.MEAT,"leather");
-        simpleItem(ModItems.CHUGWU_MUSIC_DISC,"stick");
         simpleItem(ModItems.MEDKIT,"book");
-        simpleItem(ModItems.RIFT_DEVICE);
+
+        simpleItem(ModItems.MINI,"egg");
+        simpleItem(ModItems.BIGPOT,"water_bucket");
+        simpleItem(ModItems.SLURP_JUICE,"potato");
+        simpleItem(ModItems.CHUG_JUG,"apple");
+
+        simpleItem(ModItems.HOP_ROCK,"amethyst_shard");
+        simpleItem(ModItems.RIFT_TO_GO,"nether_star");
+
+
+        //Weapons
+        simpleItem(ModItems.AR_GUN,"gold_ingot");
+        simpleItem(ModItems.SMG_GUN,"diamond");
+        simpleItem(ModItems.SHOTGUN,"gold_ingot");
+        simpleItem(ModItems.SNIPER_GUN,"spyglass");
+
         handheldItem(ModItems.LC_Shovel,"stick");
-        simpleItem(ModItems.BUILDING_WALL, "stick");
-        simpleItem(ModItems.BUILDING_FLOOR, "stick");
-        simpleItem(ModItems.BUILDING_STAIRS, "stick");
-        simpleItem(ModItems.BUILDING_PYRAMID, "stick");
+
+        //Utility
+        simpleItem(ModItems.GLIDER,"string");
+
+        //Other
+        simpleItem(ModItems.BLOCK_RIFT,"amethyst_shard");
+        simpleItem(ModItems.BLOCK_RIFT_KILL,"stick");
+
+        simpleItem(ModItems.CHUGWU_MUSIC_DISC,"stick");
+        simpleItem(ModItems.RIFT_DEVICE);
+
 
     }
 

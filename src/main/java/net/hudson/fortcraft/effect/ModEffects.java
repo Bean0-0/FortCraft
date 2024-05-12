@@ -18,6 +18,15 @@ public class ModEffects {
     public static final RegistryObject<MobEffect> BOUNCE = MOB_EFFECTS.register("bounce",
             () -> new BounceEffect(MobEffectCategory.BENEFICIAL,3124687));
 
+    public static final RegistryObject<MobEffect> SHIELD = MOB_EFFECTS.register("shield",
+            () -> new ShieldEffect(MobEffectCategory.BENEFICIAL,3124687));
+
+    public static final RegistryObject<MobEffect> RIFTING = MOB_EFFECTS.register("rifting",
+            () -> new RiftEffect(MobEffectCategory.BENEFICIAL,3124687));
+
+    public static final RegistryObject<MobEffect> SLURP = MOB_EFFECTS.register("slurp",
+            () -> new SlurpEffect(MobEffectCategory.BENEFICIAL,3124687));
+
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);
     }

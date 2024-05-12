@@ -1,13 +1,14 @@
 package net.hudson.fortcraft.block;
 
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.block.custom.BuildingGhostBlock;
-import net.hudson.fortcraft.block.custom.RiftBlock;
+import net.hudson.fortcraft.block.custom.BouncePadBlock;
+import net.hudson.fortcraft.block.custom.LaunchPadBlock;
 import net.hudson.fortcraft.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,13 +23,13 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, FortCraft.MOD_ID);
 
     public static final RegistryObject<Block> RIFT_BLOCK = registerBlock("rift_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion()));
+    public static final RegistryObject<Block> LAUNCH_PAD = registerBlock("launch_pad",
+            () -> new LaunchPadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
-    public static final RegistryObject<Block> BUILDING_GHOST = registerBlock("building_ghost",
-            () -> new BuildingGhostBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion().noCollission().replaceable()));
-            () -> new RiftBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noCollission().noOcclusion().noLootTable()));
-
+    public static final RegistryObject<Block> BOUNCE_PAD = registerBlock("bounce_pad",
+            () -> new BouncePadBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -37,7 +38,6 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        // Ensure that 'block.get()' is indeed a block before registering it as an item
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
