@@ -41,10 +41,10 @@ public class ModTeleporter implements ITeleporter {
             tries++;
         }
 
-        entity.setPos(destinationPos.getX(), destinationPos.getY(), destinationPos.getZ());
+        entity.setPos(destinationPos.getX()*8.671875, destinationPos.getY()*1.2, destinationPos.getZ()*8.671875);
 
         if (insideDimension) {
-            boolean doSetBlock = true;
+            boolean doSetBlock = false;
             for (BlockPos checkPos : BlockPos.betweenClosed(destinationPos.below(10).west(10),
                     destinationPos.above(10).east(10))) {
                 if (destinationWorld.getBlockState(checkPos).getBlock() instanceof RiftBlock) {
