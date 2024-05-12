@@ -1,10 +1,7 @@
 package net.hudson.fortcraft.datagen;
 
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.worldgen.ModBiomeModifiers;
-import net.hudson.fortcraft.worldgen.ModConfiguredFeatures;
-import net.hudson.fortcraft.worldgen.ModPlacedFeatures;
-import net.hudson.fortcraft.worldgen.biome.ModBiomes;
+
 import net.hudson.fortcraft.worldgen.dimension.ModDimensions;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -19,10 +16,6 @@ import java.util.concurrent.CompletableFuture;
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
-            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
-            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
-            .add(Registries.BIOME, ModBiomes::boostrap)
             .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
