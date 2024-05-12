@@ -91,3 +91,19 @@
 [12May2024 14:30:06.848] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/minecraft:the_nether
 [12May2024 14:30:06.850] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/minecraft:the_end
 [12May2024 14:30:06.853] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/fortcraft:fortcraft
+[12May2024 14:32:31.261] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[12May2024 14:32:31.262] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[12May2024 14:32:31.279] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[12May2024 14:32:31.298] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[12May2024 14:32:31.298] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[12May2024 14:32:31.299] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[12May2024 14:32:31.779] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/minecraft:overworld
+[12May2024 14:32:31.867] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/minecraft:the_nether
+[12May2024 14:32:31.869] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/minecraft:the_end
+[12May2024 14:32:31.872] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[FortCraft]'/fortcraft:fortcraft
+[12May2024 14:32:31.995] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (FortCraft): All chunks are saved
+[12May2024 14:32:31.995] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12May2024 14:32:31.995] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12May2024 14:32:31.995] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (fortcraft): All chunks are saved
+[12May2024 14:32:31.996] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12May2024 14:32:35.100] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
