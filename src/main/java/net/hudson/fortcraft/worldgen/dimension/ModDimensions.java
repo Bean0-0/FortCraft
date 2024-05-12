@@ -2,7 +2,6 @@ package net.hudson.fortcraft.worldgen.dimension;
 
 import com.mojang.datafixers.util.Pair;
 import net.hudson.fortcraft.FortCraft;
-import net.hudson.fortcraft.FortCraft;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -54,7 +53,11 @@ public class ModDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
+         NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
+                new FixedBiomeSource(biomeRegistry.getOrThrow(Biomes.THE_VOID)),
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
+         // This is the code that was replaced by the above code
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
                 MultiNoiseBiomeSource.createFromList(
                         new Climate.ParameterList<>(List.of(Pair.of(
@@ -67,7 +70,7 @@ public class ModDimensions {
                         ))),
                 noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
-        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.FORT_DIM_TYPE), noiseBasedChunkGenerator);
+        LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.FORT_DIM_TYPE), wrappedChunkGenerator);
 
         context.register(FORTCRAFT_KEY, stem);
     }

@@ -45,7 +45,7 @@ public class FortCraft {
 
     public FortCraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
