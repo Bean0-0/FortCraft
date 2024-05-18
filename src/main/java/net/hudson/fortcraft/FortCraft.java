@@ -2,12 +2,15 @@ package net.hudson.fortcraft;
 
 import com.mojang.logging.LogUtils;
 import net.hudson.fortcraft.block.ModBlocks;
+import net.hudson.fortcraft.block.entity.ModBlockEntities;
 import net.hudson.fortcraft.effect.ModEffects;
 import net.hudson.fortcraft.entity.ModEntities;
 import net.hudson.fortcraft.item.ModCreativeModeTabs;
 import net.hudson.fortcraft.item.ModItems;
 import net.hudson.fortcraft.sound.ModSounds;
 import net.hudson.fortcraft.util.ModData;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -45,6 +48,9 @@ public class FortCraft {
         ModEffects.register(modEventBus);
 
         ModEntities.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
 
 
 
@@ -78,6 +84,7 @@ public class FortCraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BUILDING_GHOST.get(), RenderType.translucent());
             EntityRenderers.register(ModEntities.BLOCK_RIFT_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.BLOCK_RIFT_KILL_PROJECTILE.get(), ThrownItemRenderer::new);
 
