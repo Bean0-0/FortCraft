@@ -18,7 +18,6 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
-
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(FortCraft.MOD_ID));
     }
