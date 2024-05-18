@@ -1,0 +1,13 @@
+{
+  "type": "fortcraft:fortcraft_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "minecraft:the_void",
+      "lakes": true,
+      "features": true,
+      "layers": [],
+      "structure_overrides": []
+    }
+  }
+}
