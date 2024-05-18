@@ -18,8 +18,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         //Put blocks in here
-        blocksWithItem(ModBlocks.BOUNCE_PAD);
-        blocksWithItem(ModBlocks.LAUNCH_PAD);
+        //blocksWithItem(ModBlocks.BOUNCE_PAD);
+        //blocksWithItem(ModBlocks.LAUNCH_PAD);
         blocksWithItem(ModBlocks.RIFT_BLOCK);
         blocksWithItem(ModBlocks.BUILDING_GHOST);
     }

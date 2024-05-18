@@ -1,4 +1,7 @@
-// 1.20.1	2024-05-11T12:45:08.0549645	Block States: fortcraft
+// 1.20.1	2024-05-17T21:54:13.7815511	Block States: fortcraft
+277332ad3b802fa898d9be51b79cc7f4b4a7d956 assets/fortcraft/blockstates/building_ghost.json
 8509dbddd6a7970ef4ea25d7adbef01f2af6a28e assets/fortcraft/blockstates/rift_block.json
+7b8c95fbc5df9479393611efa944ae9717216a08 assets/fortcraft/models/block/building_ghost.json
 bbdcf1ed437a5c4c0036456ee73d1d4b82ec9985 assets/fortcraft/models/block/rift_block.json
+b087b9b36a962b3c0ebcdba83c246ad9cbe4c69a assets/fortcraft/models/item/building_ghost.json
 4e95f812cb711e201985389571df11ad8d0cf504 assets/fortcraft/models/item/rift_block.json

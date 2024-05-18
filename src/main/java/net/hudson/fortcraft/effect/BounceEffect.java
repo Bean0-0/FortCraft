@@ -27,7 +27,6 @@ public class BounceEffect extends MobEffect {
         }
     }
 
-    @Override
     public boolean isDurationEffectTick(int pDuration, int pAmplifier){
         return true;
     }

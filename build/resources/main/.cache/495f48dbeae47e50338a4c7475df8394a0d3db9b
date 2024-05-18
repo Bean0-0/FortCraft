@@ -1,11 +1,24 @@
-// 1.20.1	2024-05-17T20:47:38.1672127	Item Models: fortcraft
-f18029efdb36a6bdf1764fe6dbb36fdf459f753f assets/fortcraft/models/item/bandage.json
-744fcbaebd95fae62e2d4cbe57af5eecf8d92c98 assets/fortcraft/models/item/building_floor.json
+// 1.20.1	2024-05-17T21:54:13.7785363	Item Models: fortcraft
+bb823c5c329cb462b57043e04c66fe5a20c77d5b assets/fortcraft/models/item/ar_gun.json
+20717e916bdcb779b1436f2d68b788583645f623 assets/fortcraft/models/item/bandage.json
+1b9455929e9129d4a55c7cbafacf3d229892c9e9 assets/fortcraft/models/item/bigpot.json
+6bbd70d8bb1a972ae7a13f499a740f92530ab6eb assets/fortcraft/models/item/block_rift.json
+6b24f63fab64cc12391d56578963843544cca7ef assets/fortcraft/models/item/block_rift_kill.json
+63e6a91ebec5e39454ed0e0a2d7cf2132eb0241d assets/fortcraft/models/item/building_floor.json
 744fcbaebd95fae62e2d4cbe57af5eecf8d92c98 assets/fortcraft/models/item/building_pyramid.json
-744fcbaebd95fae62e2d4cbe57af5eecf8d92c98 assets/fortcraft/models/item/building_stairs.json
-744fcbaebd95fae62e2d4cbe57af5eecf8d92c98 assets/fortcraft/models/item/building_wall.json
-744fcbaebd95fae62e2d4cbe57af5eecf8d92c98 assets/fortcraft/models/item/chugwu_music_disc.json
-a821fbb4a244b26bb80ec044cb0d3d8261fb0730 assets/fortcraft/models/item/lc_shovel.json
-7e32149a5d5941589ede3dd28e0d47a97d451ee0 assets/fortcraft/models/item/meat.json
-d2c9091593298510a2eefa07b65f9a765b5ae185 assets/fortcraft/models/item/medkit.json
+52a4f6dfdb9c931ece350cb65ce9d7c04f3344c2 assets/fortcraft/models/item/building_stairs.json
+1d2d0f81961e2e1f54b73dd078cbd6eb321d9679 assets/fortcraft/models/item/building_wall.json
+8fcb0d2019e8f357ab8bbb6da56d399739d9ea31 assets/fortcraft/models/item/chugwu_music_disc.json
+a987d71be7339ec220da54783478ab9f4a54f287 assets/fortcraft/models/item/chug_jug.json
+cad2525957b94aeef7b27a9336ae1b13ae56e688 assets/fortcraft/models/item/glider.json
+ced0945fa4ea4beabdf0946f8e909e219d97d5c7 assets/fortcraft/models/item/hop_rock.json
+231c9ba9cce8a7410f19de2235c4ec0a842befc1 assets/fortcraft/models/item/lc_shovel.json
+adef463af2f7fe6bae7dc4e6d8bd4424fce9d478 assets/fortcraft/models/item/meat.json
+7250b4291bcb55557b47e745b79930912d4335f4 assets/fortcraft/models/item/medkit.json
+3e547ae89d0a9c1c5ea1bd0f511ee937d2cf96c2 assets/fortcraft/models/item/mini.json
 91824d803c8b9799d8387206197e0be46bfb9167 assets/fortcraft/models/item/rift_device.json
+0459ce949b1c58c5e7e6dd751f1ba28f53c48f89 assets/fortcraft/models/item/rift_to_go.json
+1b627717b2fb05d0296e0694af267a17e8282578 assets/fortcraft/models/item/shotgun.json
+49fb02570bd229dfcee2e4a54f614e62515498de assets/fortcraft/models/item/slurp_juice.json
+a5111cb99c9f65c8bc0c8871ab47c77f0314ce0d assets/fortcraft/models/item/smg_gun.json
+d0de7a2f4038cda6f86561496ea1d5d70b2df9a7 assets/fortcraft/models/item/sniper_gun.json

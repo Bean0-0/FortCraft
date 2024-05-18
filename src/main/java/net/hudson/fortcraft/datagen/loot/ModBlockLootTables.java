@@ -26,8 +26,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.RIFT_BLOCK.get());
-        this.dropSelf(ModBlocks.LAUNCH_PAD.get());
-        this.dropSelf(ModBlocks.BOUNCE_PAD.get());
+        //this.dropSelf(ModBlocks.LAUNCH_PAD.get());
+        //this.dropSelf(ModBlocks.BOUNCE_PAD.get());
         this.dropSelf(ModBlocks.BUILDING_GHOST.get());
     }
 

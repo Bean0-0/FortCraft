@@ -49,8 +49,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.GLIDER.get());
 
                         //Blocks
-                        pOutput.accept(ModBlocks.LAUNCH_PAD.get());
-                        pOutput.accept(ModBlocks.BOUNCE_PAD.get());
+                        //pOutput.accept(ModBlocks.LAUNCH_PAD.get());
+                        //pOutput.accept(ModBlocks.BOUNCE_PAD.get());
                         pOutput.accept(ModBlocks.RIFT_BLOCK.get());
 
                         //Other
