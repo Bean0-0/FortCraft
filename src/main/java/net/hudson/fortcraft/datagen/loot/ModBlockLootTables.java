@@ -17,6 +17,8 @@ import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
 
+
+
     public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
@@ -37,6 +39,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return ModBlocks.BLOCKS.getEntries().stream()
+                .map(RegistryObject::get)
+                .filter(item -> item instanceof Block)
+                .map(item -> (Block) item)
+                ::iterator;
     }
 }
