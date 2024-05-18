@@ -47,7 +47,7 @@ public class BlockRiftProjectileKillEntity extends ThrowableItemProjectile{
 
             this.level().broadcastEntityEvent(this, ((byte) 3));
                 AABB aabb = this.getBoundingBox().inflate(1D);
-
+                this.isInvisible();
                 for (BlockPos blockpos : BlockPos.betweenClosed(Mth.floor(aabb.minX), Mth.floor(aabb.minY), Mth.floor(aabb.minZ), Mth.floor(aabb.maxX), Mth.floor(aabb.maxY), Mth.floor(aabb.maxZ))) {
                     BlockState blockstate = this.level().getBlockState(blockpos);
                     Block block = blockstate.getBlock();

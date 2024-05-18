@@ -73,6 +73,18 @@ public class ModItems {
     public static final RegistryObject<Item> BLOCK_RIFT_KILL= ITEMS.register("block_rift_kill",
             () -> new BlockRiftKillItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> BUILDING_WALL = ITEMS.register("building_wall",
+            () -> new BuildingWallItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_FLOOR = ITEMS.register("building_floor",
+            () -> new BuildingFloorItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_STAIRS = ITEMS.register("building_stairs",
+            () -> new BuildingStairsItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> BUILDING_PYRAMID = ITEMS.register("building_pyramid",
+            () -> new BuildingPyramidItem(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
