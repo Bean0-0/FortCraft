@@ -12,6 +12,12 @@
   "item.fortcraft.chugwu_music_disc": "Chug With You",
   "item.fortcraft.chugwu_music_disc.desc": "Leviathan - Chug Jug With You",
 
+  "block.fortcraft.building_ghost": "Building Ghost",
+  "item.fortcraft.building_wall": "Build Wall",
+  "item.fortcraft.building_floor": "Build Floor",
+  "item.fortcraft.building_stairs": "Build Stairs",
+  "item.fortcraft.building_pyramid": "Build Pyramid",
+
   "effects.fortcraft.freeze": "Freeze",
 
   "creativetab.fortcraft_tab": "FortCraft"

@@ -2,10 +2,12 @@ package net.hudson.fortcraft;
 
 import com.mojang.logging.LogUtils;
 import net.hudson.fortcraft.block.ModBlocks;
-import net.hudson.fortcraft.effect.ModEffects;
+import net.hudson.fortcraft.block.entity.ModBlockEntities;
 import net.hudson.fortcraft.item.ModCreativeModeTabs;
 import net.hudson.fortcraft.item.ModItems;
 import net.hudson.fortcraft.sound.ModSounds;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -14,9 +16,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -40,10 +40,12 @@ public class FortCraft {
         ModBlocks.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+
         ModEffects.register(modEventBus);
 
         ModStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
-
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -76,7 +78,7 @@ public class FortCraft {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // do something that can only be done on the client
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BUILDING_GHOST.get(), RenderType.translucent());
         }
     }
 }
